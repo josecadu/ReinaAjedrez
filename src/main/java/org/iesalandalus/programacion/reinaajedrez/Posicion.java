@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.reinaajedrez;
 
+import java.util.Objects;
+
 public class Posicion {
 	//declaracion de atributos
 	private int fila;
@@ -15,6 +17,23 @@ public class Posicion {
 		setFila (p.getFila());
 		setColumna (p.getColumna());
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(columna, fila);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Posicion other = (Posicion) obj;
+		return columna == other.columna && fila == other.fila;
+	}
+
 	public int getFila() {
 		return fila;
 	}
