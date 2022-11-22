@@ -11,6 +11,10 @@ public class Posicion {
 		
 	}
 	
+	public Posicion (Posicion p) {
+		setFila (p.getFila());
+		setColumna (p.getColumna());
+	}
 	public int getFila() {
 		return fila;
 	}
