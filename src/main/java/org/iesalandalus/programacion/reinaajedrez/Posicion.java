@@ -51,4 +51,9 @@ public class Posicion {
 		this.columna = columna;
 	}
 
+	@Override
+	public String toString() {
+		return "Posicion [fila=" + fila + ", columna=" + columna + "]";
+	}
+
 }
