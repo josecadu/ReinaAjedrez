@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.reinaajedrez;
+package org.iesalandalus.programacion.reinaajedrez.modelo;
 
 import java.util.Objects;
 
