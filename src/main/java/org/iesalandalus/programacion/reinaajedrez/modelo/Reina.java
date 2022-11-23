@@ -26,6 +26,18 @@ public class Reina {
 		 setPosicion(posicionReinaBlanca);
 		
 	}
+	public Reina (Color color) {
+		setColor (color);
+		if (color == Color.BLANCO);
+		{
+			setPosicion (new Posicion(posicionReinaBlanca));
+		}
+		
+		if  (color == Color.NEGRO); {
+			setPosicion (new Posicion( 8, 'd'));
+			}
+			
+	}
 	
 	
 }
