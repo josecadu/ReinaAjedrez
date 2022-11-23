@@ -38,6 +38,10 @@ public class Reina {
 			}
 			
 	}
+	public void mover (Direccion direccion, int pasos)
+	{
+		
+	}
 	
 	
 }
