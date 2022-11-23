@@ -9,7 +9,7 @@ public class Reina {
 	}
 	private void setColor(Color color) {
 		if (color == null)
-			throw new NullPointerException("ERROR: color no puede ser null.");
+			throw new NullPointerException("ERROR: El color no puede ser null.");
 		this.color = color;
 	}
 	public Posicion getPosicion() {
@@ -17,7 +17,7 @@ public class Reina {
 	}
 	private void setPosicion(Posicion posicion) {
 		if (posicion == null) 
-			throw new NullPointerException("ERROR: posicion no puede ser null.");
+			throw new NullPointerException("ERROR: La posicion no puede ser null.");
 		this.posicion = posicion;
 	}
 	
