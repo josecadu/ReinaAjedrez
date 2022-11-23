@@ -17,22 +17,7 @@ public class Posicion {
 		setFila (p.getFila());
 		setColumna (p.getColumna());
 	}
-	@Override
-	public int hashCode() {
-		return Objects.hash(columna, fila);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Posicion other = (Posicion) obj;
-		return columna == other.columna && fila == other.fila;
-	}
+	
 
 	public int getFila() {
 		return fila;
@@ -49,6 +34,22 @@ public class Posicion {
 		if (columna != 'a' && columna != 'b' && columna != 'c' && columna != 'd' && columna != 'e' && columna != 'f' && columna != 'g' && columna != 'h')
 			throw new IllegalArgumentException("ERROR: columna no valida.");
 		this.columna = columna;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(columna, fila);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Posicion other = (Posicion) obj;
+		return columna == other.columna && fila == other.fila;
 	}
 
 	@Override
