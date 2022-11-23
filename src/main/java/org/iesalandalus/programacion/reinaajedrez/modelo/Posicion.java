@@ -14,6 +14,8 @@ public class Posicion {
 	}
 	
 	public Posicion (Posicion p) {
+		if (p==null)
+			throw new NullPointerException("ERROR: No se puede copiar una posicion nula.");
 		setFila (p.getFila());
 		setColumna (p.getColumna());
 	}
