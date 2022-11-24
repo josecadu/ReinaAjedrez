@@ -78,7 +78,7 @@ public class Consola {
 		public static int elegirPasos() 
 		{
 			int selPasos=0;
-			while (selPasos <1 || selPasos >8)
+			while (selPasos <1 || selPasos >7)
 				System.out.println("Cuantos pasos desea mover?");
 			selPasos= Entrada.entero();
 			return selPasos;	
