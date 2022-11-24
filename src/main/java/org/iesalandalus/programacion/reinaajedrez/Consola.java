@@ -1,5 +1,6 @@
 package org.iesalandalus.programacion.reinaajedrez;
 
+import org.iesalandalus.programacion.reinaajedrez.modelo.Color;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 
@@ -26,6 +27,31 @@ public class Consola {
 		System.out.println("1.ELIGE LA OPCION QUE DESEA REALIZAR");
 		menuSeleccion= Entrada.entero();
 		return menuSeleccion;	
+	}
+	public static Color elegirOpcion()
+	{
+		Color color=null;
+		int opcionColor=0;
+		do {
+			System.out.print("Elija un color: ");
+			System.out.println("==========");
+			System.out.println("1. Blanca.");
+			System.out.println("2. Negra.");
+			
+			opcionColor=Entrada.entero();
+		} while (opcionColor!=1 && opcionColor!=2);
+		
+		switch (opcionColor) {
+		case 1:
+			color=Color.BLANCO;
+			break;
+		case 2:
+			color=Color.NEGRO;
+			break;
+		}
+		
+		return color;
+		
 	}
 	
 }
