@@ -83,4 +83,8 @@ public class Consola {
 			selPasos= Entrada.entero();
 			return selPasos;	
 		}
+		public static void despedirse()
+		{
+			System.out.println("Gracias por jugar con nosotros, un saludo.");
+		}
 }
