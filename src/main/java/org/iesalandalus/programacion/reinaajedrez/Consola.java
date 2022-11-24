@@ -22,8 +22,8 @@ public class Consola {
 		}
 	public static int elegirOpcionMenu()
 	{
-		int menuSeleccion=1;
-		while (menuSeleccion !=1 || menuSeleccion !=2 || menuSeleccion !=3 || menuSeleccion !=4)
+		int menuSeleccion=0;
+		while (menuSeleccion <1 || menuSeleccion >4)
 		System.out.println("1.ELIGE LA OPCION QUE DESEA REALIZAR");
 		menuSeleccion= Entrada.entero();
 		return menuSeleccion;	
@@ -61,11 +61,19 @@ public class Consola {
 			System.out.println("2.NOROESTE.");
 			System.out.println("3.NORESTE.");
 			System.out.println("4.OESTE.");
-			System.out.println("1.SUROESTE.");
-			System.out.println("2.SUR.");
-			System.out.println("3.SURESTE.");
-			System.out.println("4.ESTE.");
+			System.out.println("5.SUROESTE.");
+			System.out.println("6.SUR.");
+			System.out.println("7.SURESTE.");
+			System.out.println("8.ESTE.");
 		
 		}
+	
+		public static int elegirDireccion()
+		{
+			int menuDireccion=0;
+			while (menuDireccion <1 || menuDireccion >8)
+			menuDireccion= Entrada.entero();
+			return menuDireccion;	
+	}
 	
 }
