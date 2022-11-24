@@ -75,5 +75,12 @@ public class Consola {
 			menuDireccion= Entrada.entero();
 			return menuDireccion;	
 	}
-	
+		public static int elegirPasos() 
+		{
+			int selPasos=0;
+			while (selPasos <1 || selPasos >8)
+				System.out.println("Cuantos pasos desea mover?");
+			selPasos= Entrada.entero();
+			return selPasos;	
+		}
 }
