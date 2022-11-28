@@ -40,25 +40,24 @@ public class Reina {
 			}
 			
 	}
-	public void mover (Direccion direccion, int pasos) throws OperationNotSupportedException
+	public void mover (Direccion direccion, int pasos) throws OperationNotSupportedException , NullPointerException
 	{
-		if (pasos < 1 || pasos > 7) {
+		if (pasos < 1 || pasos > 7 )
+				{
 		
 			throw new IllegalArgumentException("ERROR: El número de pasos debe estar comprendido entre 1 y 7.");
 			
-		}else if (direccion== null)
+			
+		}else if (direccion.equals(null))
 			{
 				throw new NullPointerException("ERROR: la direccion no puede ser null.");
-			
 		}
-	
 		switch (direccion) {
 		case NORTE:
 			
-			
 				try {
 					setPosicion(new Posicion(posicion.getFila() +pasos , posicion.getColumna()));
-				} catch (IllegalArgumentException p) {
+				} catch (IllegalArgumentException p ) {
 					throw new OperationNotSupportedException("ERROR: Movimiento no válido (se sale del tablero).");
 				}
 			
@@ -127,16 +126,13 @@ public class Reina {
 			
 			break;
 		default:
-			throw new NullPointerException("ERROR: La dirección no puede ser nula");
-		}
+				throw new NullPointerException("ERROR: La dirección no puede ser nula");
 			
-		
-		
-		
+		}
 	}
 	@Override
 	public String toString() {
-		return "Reina [color=" + color + ", posicion=" + posicion + "]";
+		return "Reina color " + color + ", posicion " + posicion ;
 	}
 	
 	
