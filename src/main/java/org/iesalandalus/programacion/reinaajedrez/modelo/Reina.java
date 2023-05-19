@@ -5,7 +5,7 @@ import javax.naming.OperationNotSupportedException;
 public class Reina {
 	private Color color;
 	private Posicion posicion;
-	Posicion posicionReinaBlanca=new Posicion(1, 'd');
+	
 	
 	public Color getColor() {
 		return color;
@@ -16,19 +16,21 @@ public class Reina {
 		this.color = color;
 	}
 	public Posicion getPosicion() {
-		return posicion;
+		return new Posicion(posicion);
 	}
 	private void setPosicion(Posicion posicion) {
 		if (posicion == null) 
 			throw new NullPointerException("ERROR: La posicion no puede ser null.");
-		this.posicion = posicion;
+		this.posicion=new Posicion(posicion);
 	}
 	public Reina (){
+		Posicion posicionReinaBlanca=new Posicion(1, 'd');
 		 setColor (Color.BLANCO) ;
 		 setPosicion(posicionReinaBlanca);
 		
 	}
 	public Reina (Color color) {
+		Posicion posicionReinaBlanca=new Posicion(1, 'd');
 		setColor (color);
 		if (color == Color.BLANCO)
 		{
@@ -40,18 +42,19 @@ public class Reina {
 			}
 			
 	}
-	public void mover (Direccion direccion, int pasos) throws OperationNotSupportedException , NullPointerException
+	
+	public void mover (Direccion direccion, int pasos) throws OperationNotSupportedException 
 	{
-		if (pasos < 1 || pasos > 7 )
-				{
-		
-			throw new IllegalArgumentException("ERROR: El número de pasos debe estar comprendido entre 1 y 7.");
-			
-			
-		}else if (direccion.equals(null))
-			{
-				throw new NullPointerException("ERROR: la direccion no puede ser null.");
-		}
+		if (direccion.equals(null))
+		{
+			throw new NullPointerException("ERROR: la direccion no puede ser nula.");
+	} 
+		else if (pasos < 1 || pasos > 7 )
+		{
+
+	throw new IllegalArgumentException("ERROR: El número de pasos debe estar comprendido entre 1 y 7.");
+	
+}
 		switch (direccion) {
 		case NORTE:
 			
@@ -126,7 +129,7 @@ public class Reina {
 			
 			break;
 		default:
-				throw new NullPointerException("ERROR: La dirección no puede ser nula");
+				throw new NullPointerException("ERROR: La dirección no puede ser nula.");
 			
 		}
 	}
